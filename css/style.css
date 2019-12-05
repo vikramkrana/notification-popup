@@ -1,0 +1,91 @@
+body {
+  background: #212f3f;
+}
+#popup-wrap {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99999999;
+  font-family: "Open Sans", sans-serif;
+}
+.popup-row {
+  width: 320px;
+  border: 0;
+  text-align: left;
+  z-index: 99999;
+  font-weight: 700;
+  border-radius: 3px;
+  background-color: #f36b39;
+  position: relative;
+  cursor: pointer;
+}
+.popup-row .popup-container {
+  display: flex;
+  align-items: center;
+  padding: 14px;
+}
+.popup-image-wrap img {
+  width: 22px;
+}
+.popup-content-wrap {
+  margin: 0;
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 0 6px 6px 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.popup-content-wrap .popup-content {
+  margin: 0;
+}
+.popup-content-wrap .popup-content a {
+  font-family: inherit;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 16px;
+}
+.popup-row .popup-close {
+  position: absolute;
+  right: 8px;
+  height: 12px;
+  width: 12px;
+  z-index: 999999999999999;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  transform: rotate(45deg);
+  opacity: 1;
+}
+.popup-row .popup-close::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+.popup-row .popup-close::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 2px;
+  background-color: #fff;
+  position: absolute;
+  left: 5px;
+  top: 0;
+}
+@media (max-width:768px){
+  .popup-row {
+    width: 260px;
+  }
+  .popup-content-wrap .popup-content a{
+    font-size: 12px;
+  }
+}
